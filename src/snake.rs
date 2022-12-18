@@ -1,5 +1,5 @@
 use crate::direction::Direction;
-use crate::direction::Point;
+use crate::point::Point;
 
 #[derive(Debug)]
 pub struct Snake {
@@ -13,7 +13,7 @@ impl Snake {
         let opposite = direction.opposite();
         let body: Vec<Point> = (0..length)
             .into_iter()
-            .map(|i| start.transform(oppostite, i))
+            .map(|i| start.transform(opposite, i))
             .collect();
 
         Self { body, direction, digesting: false }

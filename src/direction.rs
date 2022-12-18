@@ -1,4 +1,4 @@
-#derive(Debug, Copy, Clone, Eq, PartialEq)]
+#[derive(Debug, Copy, Clone, Eq, PartialEq)]
 pub enum Direction {
     Up,
     Right,
@@ -7,7 +7,7 @@ pub enum Direction {
 }
 
 impl Direction {
-    pub fn oppostite(&self) -> Self {
+    pub fn opposite(&self) -> Self {
         match self {
             Self::Up => Self::Down,
             Self::Right => Self::Left,
